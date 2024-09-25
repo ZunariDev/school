@@ -6,14 +6,10 @@ random.shuffle(listNum)
 
 def insertSort(item):
     for i in range(1, len(item)):
-        print(f"DEBUG: for loop executed with i = {i}")
         j = i
         loop = True
         
         while j > 0:
-            print(f"DEBUG: while loop executed with j = {j}")
-            print(f"DEBUG: {item[j]}")
-            
             if item[j] < item[j-1]:
                 item[j], item[j-1] = item[j-1], item[j]
             else:
@@ -22,5 +18,8 @@ def insertSort(item):
             j -= 1
 
 print(listNum)
+time1 = time.time()
 insertSort(listNum)
+time2 = time.time()
 print(listNum)
+print(f"Sort time: {round(time2 - time1, 4)}")
