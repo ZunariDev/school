@@ -1,10 +1,10 @@
 import time
 import random
 
-liste = [i+1 for i in range(int(input("List length [-> int] > ")))]
-random.shuffle(liste)
+listNum = [i+1 for i in range(int(input("List length [-> int] > ")))]
+random.shuffle(listNum)
 
-def selectSort(liste):
+def selectSort(item):
     for i in range(len(item)):
         value = item[i]
         valueIndex = i
@@ -15,9 +15,9 @@ def selectSort(liste):
         
         item[i], item[valueIndex] = item[valueIndex], value[i]
     
-print(liste)
+print(listNum)
 time1 = time.time()
-selectSort(liste)
+selectSort(listNum)
 time2 = time.time()
-print(liste)
+print(listNum)
 print(f"Sort time: {round(time2 - time1, 4)}")
